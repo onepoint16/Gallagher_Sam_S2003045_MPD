@@ -67,14 +67,14 @@
             android:padding="20dp"
             android:text="Search" />
 
-        <ListView
-            android:id="@+id/mainListView"
-            android:layout_width="match_parent"
-            android:layout_height="390dp"
-            android:divider="@color/white"
-            android:dividerHeight="1dp">
+         <ListView
+             android:id="@+id/mainListView"
+             android:layout_width="match_parent"
+             android:layout_height="345dp"
+             android:divider="@color/white"
+             android:dividerHeight="1dp">
 
-        </ListView>
+         </ListView>
 
     </LinearLayout>
 </ScrollView>

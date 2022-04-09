@@ -28,20 +28,22 @@ public class PullParser {
 
         TrafficScotlandInfo item = null;
 
+        Log.d("String to Parse : ", stringToParse);
+
 
         try {
-            // Get our factory and PullParser
+            // Get factory and PullParser
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             XmlPullParser xpp = factory.newPullParser();
 
-            // point the parser to our file.
+            // point the parser to file.
             xpp.setInput( new StringReader( stringToParse ) );
 
             // get initial eventType
             int eventType = xpp.getEventType();
 
 
-            // Loop through pull events until we reach END_DOCUMENT
+            // Loop through pull events until END_DOCUMENT
             while (eventType != XmlPullParser.END_DOCUMENT) {
 
                 if (eventType == XmlPullParser.START_TAG)
@@ -87,6 +89,7 @@ public class PullParser {
                     if (xpp.getName().equalsIgnoreCase((KEY_SITE)))
                     {
                         tsiList.add(item);
+                        Log.d("object being Added : ", tsiList.toString());
                     }
                     else if (xpp.getName().equalsIgnoreCase(KEY_MAIN))
                     {

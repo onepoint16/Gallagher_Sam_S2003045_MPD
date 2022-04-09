@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             String userEntry = searchWords.getText().toString().toLowerCase();
 
-            Log.d("userEntry", userEntry);
+            Log.d("Search Term: ", userEntry);
 
             ArrayList<TrafficScotlandInfo> searchResultsList = new ArrayList<>();
 
@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 if (item.getRoad().toLowerCase().contains(userEntry))
                 {
+                    Log.d("Search item added: ", item.toString());
                     searchResultsList.add(item);
                 }
 
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private String url;
         public Task(String aurl)
         {
-            url = aurl;
+            url = aurl;Log.d("URL =", url);
         }
         @Override
         public void run()
@@ -177,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d("Array Data", displayList.toString());
 
                     ArrayAdapter<TrafficScotlandInfo> adapter = new ArrayAdapter<>(MainActivity.this, R.layout.activity_display_list, displayList);
+
+                    Log.d("Adapted List: ", adapter.toString());
+
                     listView.setAdapter(adapter);
                 }
             });
