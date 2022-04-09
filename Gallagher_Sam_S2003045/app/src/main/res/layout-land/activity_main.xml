@@ -1,0 +1,107 @@
+<!--   MPD XML Starter code Semester B Session 2020 2021   -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:id="@+id/mainRelative">
+
+    <RelativeLayout
+        android:id="@+id/leftRelative"
+        android:layout_width="334dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/plannedRoadWorksButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_700"
+                android:padding="10dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="2.5"
+                android:text="Planned Road Works" />
+
+            <Button
+                android:id="@+id/roadWorksButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_700"
+                android:padding="10dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="2.5"
+                android:text="Road Works" />
+
+            <Button
+                android:id="@+id/currentIncidentsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_700"
+                android:padding="10dp"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="2.5"
+                android:text="Current Incidents" />
+
+            <EditText
+                android:id="@+id/searchWords"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter Search Term"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search" />
+
+            <TextView
+                android:id="@+id/author2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/black"
+                android:text="@string/author"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightRelative"
+        android:layout_width="401dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+        android:layout_toRightOf="@id/leftRelative">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/mainListView"
+                android:layout_width="match_parent"
+                android:layout_height="324dp"
+                android:divider="@color/white"
+                android:dividerHeight="1dp">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
