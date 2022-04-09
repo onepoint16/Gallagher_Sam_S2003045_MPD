@@ -1,3 +1,6 @@
+//Gallagher_Sam
+//S2003045
+
 package com.example.gallagher_sam_s2003045;
 
 public class TrafficScotlandInfo {
